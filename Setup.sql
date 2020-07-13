@@ -1,4 +1,4 @@
-USE burgershack713;
+USE codeworksstudent;
 
 -- MySql : MongoDb => Table : Collection
 
@@ -66,5 +66,5 @@ USE burgershack713;
 -- VALUES
 -- (10.67, 3) 
 
-SELECT * FROM combos
+-- SELECT * FROM combos
  -- JOIN 
