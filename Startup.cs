@@ -36,9 +36,11 @@ namespace BurgerShack
 
             // Services
             services.AddTransient<BurgerService>();
+            services.AddTransient<ComboService>();
 
             // Repositories
             services.AddTransient<BurgerRepository>();
+            services.AddTransient<ComboRepository>();
 
         }
 

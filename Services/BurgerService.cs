@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using BurgerShack.Models;
-using BurgerShack.Db;
 using BurgerShack.Repositories;
 
 namespace BurgerShack.Services

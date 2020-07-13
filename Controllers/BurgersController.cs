@@ -11,10 +11,13 @@ namespace BurgerShack.Controllers
     public class BurgersController : ControllerBase
     {
         private readonly BurgerService _service;
+        private readonly ComboService _comboService;
 
-        public BurgersController(BurgerService service)
+
+        public BurgersController(BurgerService service, ComboService cs)
         {
             _service = service;
+            _comboService = cs;
         }
 
         [HttpGet]  // GETALL
@@ -29,6 +32,20 @@ namespace BurgerShack.Controllers
                 return BadRequest(e.Message);
             }
         }
+
+        [HttpGet("{id}/combos")] // GETBYID
+        public ActionResult<IEnumerable<DbCombo>> GetByBurgerId(int id)
+        {
+            try
+            {
+                return Ok(_comboService.GetByBurgerId(id));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
         [HttpGet("{id}")] // GETBYID
         public ActionResult<Burger> Get(int id)
         {

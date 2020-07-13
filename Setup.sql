@@ -42,3 +42,29 @@ USE burgershack713;
 -- DELETE FROM burgers; -- DELETES ALL DATA IN TABLE
 -- DROP TABLE burgers; -- DESTROYS WHOLE TABLE
 -- DROP DATABASE burgershack713; -- DESTROYS WHOLE DATABASE
+
+
+
+
+
+
+-- CREATE TABLE combos
+-- (
+--     id INT NOT NULL AUTO_INCREMENT,
+--     price DECIMAL(6, 2) DEFAULT 9.00,
+--     burgerId INT NOT NULL,
+
+--     PRIMARY KEY (id),
+
+--     FOREIGN KEY (burgerId)
+--         REFERENCES burgers (id)
+--         ON DELETE CASCADE
+-- );
+
+-- INSERT INTO combos 
+-- (price, burgerId) 
+-- VALUES
+-- (10.67, 3) 
+
+SELECT * FROM combos
+ -- JOIN 
